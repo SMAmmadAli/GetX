@@ -12,6 +12,9 @@ class FavView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("Add to Favorite"),
+      ),
       body: ListView.builder(
         itemCount: favController.itemList.length,
         itemBuilder: (context, index) {

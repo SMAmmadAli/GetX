@@ -11,24 +11,30 @@ class OpacitySlider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Obx(
-            () => Container(
-              height: 200,
-              width: 200,
-              color: Colors.blue.withOpacity(sliderController.opacity.value),
+      appBar: AppBar(
+        title: Text("Slider"),
+      ),
+      body: SafeArea(
+        child: Column(
+          children: [
+            Obx(
+              () => Container(
+                margin: const EdgeInsets.only(top: 20),
+                height: 200,
+                width: 200,
+                color: Colors.blue.withOpacity(sliderController.opacity.value),
+              ),
             ),
-          ),
-          Obx(
-            () => Slider(
-              value: sliderController.opacity.value,
-              onChanged: (value) {
-                sliderController.setOpacity(value);
-              },
-            ),
-          )
-        ],
+            Obx(
+              () => Slider(
+                value: sliderController.opacity.value,
+                onChanged: (value) {
+                  sliderController.setOpacity(value);
+                },
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

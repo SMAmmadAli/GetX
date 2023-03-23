@@ -8,6 +8,9 @@ class SwitchScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Switch"),
+      ),
       body: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
