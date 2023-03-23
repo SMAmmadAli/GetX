@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:state_management_getx/view/opacity_slider.dart';
+import 'package:state_management_getx/view/switch.dart';
 
 class CounterController extends GetxController {
   RxInt number = 1.obs;
@@ -9,7 +10,11 @@ class CounterController extends GetxController {
     print(number.value);
   }
 
-  MoveToNewScreen() {
+  moveToSliderScreen() {
     Get.to(OpacitySlider());
+  }
+
+  moveToSwitchScreen() {
+    Get.to(MySwitch());
   }
 }
