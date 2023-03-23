@@ -17,25 +17,24 @@ class FavView extends StatelessWidget {
         itemBuilder: (context, index) {
           return Card(
               child: ListTile(
-            onTap: () {
-              if (favController.favList
-                  .contains(favController.itemList[index].toString())) {
-                favController
-                    .removeToFav(favController.itemList[index].toString());
-              } else {
-                favController
-                    .addToFav(favController.itemList[index].toString());
-              }
-            },
-            title: Text(favController.itemList[index].toString()),
-            trailing: Icon(
-              Icons.favorite,
-              color: favController.favList
-                      .contains(favController.itemList[index].toString())
-                  ? Colors.red
-                  : Colors.white,
-            ),
-          ));
+                  onTap: () {
+                    if (favController.favList
+                        .contains(favController.itemList[index])) {
+                      favController.removeToFav(favController.itemList[index]);
+                    } else {
+                      favController.addToFav(favController.itemList[index]);
+                    }
+                  },
+                  title: Text(favController.itemList[index].toString()),
+                  trailing: Obx(
+                    () => Icon(
+                      Icons.favorite,
+                      color: favController.favList
+                              .contains(favController.itemList[index])
+                          ? Colors.red
+                          : Colors.white,
+                    ),
+                  )));
         },
       ),
     );
