@@ -72,7 +72,12 @@ class HomeView extends StatelessWidget {
                 onPressed: () {
                   counterController.moveToSwitchScreen();
                 },
-                child: const Text("Switch Screen"))
+                child: const Text("Switch Screen")),
+            ElevatedButton(
+                onPressed: () {
+                  counterController.moveToFavScreen();
+                },
+                child: const Text("Add Fav Screen"))
           ],
         ),
       ),
