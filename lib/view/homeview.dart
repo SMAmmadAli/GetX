@@ -62,7 +62,12 @@ class HomeView extends StatelessWidget {
                 onPressed: () {
                   counterController.incrementNumber();
                 },
-                child: const Text("Add Number"))
+                child: const Text("Add Number")),
+            ElevatedButton(
+                onPressed: () {
+                  counterController.MoveToNewScreen();
+                },
+                child: Text("Next Screen"))
           ],
         ),
       ),
