@@ -15,6 +15,6 @@ class CounterController extends GetxController {
   }
 
   moveToSwitchScreen() {
-    Get.to(MySwitch());
+    Get.to(SwitchScreen());
   }
 }
